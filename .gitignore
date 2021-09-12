@@ -21,6 +21,6 @@
 
 
 /lms-web/target
-/lms-h5/node_modules
+/lms-h5/node_modules/*
 /lms-h5/test
 *.iml
