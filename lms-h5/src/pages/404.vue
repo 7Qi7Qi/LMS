@@ -7,7 +7,11 @@ import HelloWorld from "../components/HelloWorld";
 export default {
   components: {HelloWorld},
   comments: HelloWorld,
-  name: "404"
+  name: "404",
+  mounted() {
+    debugger;
+    console.log(404)
+  }
 }
 </script>
 

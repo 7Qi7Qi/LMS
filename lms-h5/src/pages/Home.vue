@@ -6,7 +6,11 @@
 
 <script>
 export default {
-  name: "Home"
+  name: "Home",
+  mounted() {
+    debugger;
+    console.log('Home')
+  }
 }
 </script>
 

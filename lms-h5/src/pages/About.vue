@@ -4,7 +4,11 @@
 
 <script>
 export default {
-  name: "About"
+  name: "About",
+  mounted() {
+    debugger;
+    console.log('About')
+  }
 }
 </script>
 

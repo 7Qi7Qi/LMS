@@ -7,7 +7,12 @@
 </template>
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+
+  mounted() {
+    debugger;
+    console.log('App')
+  }
 }
 </script>
 

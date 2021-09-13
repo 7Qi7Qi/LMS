@@ -27,7 +27,7 @@ const app = new Vue({
       const matchView = routes[this.currentRoute];
       return matchView
         ? require('./pages/' + matchView + '.vue')
-        : require('App.vue')
+        : require('./pages/404.vue')
     }
   },
 })
