@@ -1,13 +1,10 @@
 // import ElementUI from 'element-ui'
 // import 'element-ui/lib/theme-chalk/index.css'
 import routes from './router/routes'
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp, h} from 'vue'
 
 
 //Components
-// createApp(ElementUI)
-createApp(App).mount('#app')
 
 const simpleRouter = {
   data: () => ({
@@ -15,15 +12,25 @@ const simpleRouter = {
   }),
   computed: {
     CurrentComponent() {
-      return routes[this.currentRoute]
-      const matchView = routes[this.currentRoute];
+      const matchView = routes[this.currentRoute]
       return matchView
-          ? require('./pages/' + matchView + '.vue')
-          : require('./pages/404.vue')
+          ? import(`./pages/${matchView}.vue`)
+          : import(`./pages/404.vue`)
     }
   },
+  created() {
+    window.addEventListener('popstate', () => {
+      this.currentRoute = window.location.pathname;
+    })
+  },
+  render() {
+    this.CurrentComponent.then(res => {
+      return h(res);
+    })
+  }
 }
 
-window.addEventListener('popstate', () => {
-  app.currentRoute = window.location.pathname;
-})
+const app = createApp(simpleRouter);
+app.mount('#app')
+
+
