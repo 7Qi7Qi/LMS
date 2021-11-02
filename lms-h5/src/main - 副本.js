@@ -3,34 +3,32 @@
 import routes from './router/routes'
 import { createApp, h} from 'vue'
 
-
-//Components
-
 const simpleRouter = {
   data: () => ({
     currentRoute: window.location.pathname
   }),
   computed: {
     CurrentComponent() {
+      debugger
+      // return routes[this.currentRoute] ||
       const matchView = routes[this.currentRoute]
+      console.log(`matchView: ${matchView}`)
+      console.log(`currentRoute: ${this.currentRoute}`)
       return matchView
-          ? import(`./pages/${matchView}.vue`)
-          : import(`./pages/404.vue`)
+          ? require('./pages/' + matchView + '.vue')
+          : require('./pages/404.vue')
     }
+  },
+  render() {
+    return h(this.CurrentComponent);
   },
   created() {
     window.addEventListener('popstate', () => {
       this.currentRoute = window.location.pathname;
     })
-  },
-  render() {
-    this.CurrentComponent.then(res => {
-      return h(res);
-    })
   }
 }
 
-const app = createApp(simpleRouter);
+var app = createApp(simpleRouter);
 app.mount('#app')
-
-
+// app.use(ElementUI)
