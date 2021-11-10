@@ -1,0 +1,620 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Evan Klitzke">
+    <link href="https://fonts.googleapis.com/css?family=Roboto%7CRoboto+Mono" rel="stylesheet">
+    <link href="/static/min.css?v=4850d62219fdb537" type="text/css" rel="stylesheet">    <link rel="icon" href="/static/favicon.ico?v=1d2edbc1e898833f">
+</head>
+<body>
+<h1>eklitzke.org</h1>
+
+<p>Welcome to Evan Klitzke&rsquo;s web log.</p>
+
+<table class="sitemap_table">
+    <tr>
+        <td><time>2021-10-14</time></td>
+        <td><a href="handling-updated-rpm-package-configuration-files">Handling Updated RPM Package Configuration Files</a></td>
+    </tr>
+    <tr>
+        <td><time>2021-10-01</time></td>
+        <td><a href="std-filesystem-last-write-time">An Annoyance With std::filesystem::last_write_time</a></td>
+    </tr>
+    <tr>
+        <td><time>2021-09-16</time></td>
+        <td><a href="don't-use-div(3)">Don't use div(3)</a></td>
+    </tr>
+    <tr>
+        <td><time>2021-05-05</time></td>
+        <td><a href="stl-iterators-and-performance-revisited">STL Iterators and Performance Revisited</a></td>
+    </tr>
+    <tr>
+        <td><time>2021-01-04</time></td>
+        <td><a href="std-upper-bound-and-std-lower-bound">How To Use std::lower_bound and std::upper_bound</a></td>
+    </tr>
+    <tr>
+        <td><time>2020-12-15</time></td>
+        <td><a href="how-tail-call-optimization-works">How Tail Call Optimization Works</a></td>
+    </tr>
+    <tr>
+        <td><time>2020-09-15</time></td>
+        <td><a href="blog-generator-rewrite">Blog Generator Rewrite</a></td>
+    </tr>
+    <tr>
+        <td><time>2020-05-24</time></td>
+        <td><a href="generating-kernel-headers-for-bpf-kprobes">Generating Kernel Headers For BPF Kprobes</a></td>
+    </tr>
+    <tr>
+        <td><time>2019-09-21</time></td>
+        <td><a href="making-helm-projectile-find-file-fast-in-large-projects">Making helm-projectile-find-file Fast In Large Projects</a></td>
+    </tr>
+    <tr>
+        <td><time>2019-03-30</time></td>
+        <td><a href="running-build-commands-nicely">Running Build Commands Nicely</a></td>
+    </tr>
+    <tr>
+        <td><time>2019-02-19</time></td>
+        <td><a href="maintaining-sorted-lists-in-python">Maintaining Sorted Lists In Python</a></td>
+    </tr>
+    <tr>
+        <td><time>2019-02-09</time></td>
+        <td><a href="the-cbc-padding-oracle-problem">The CBC Padding Oracle Problem</a></td>
+    </tr>
+    <tr>
+        <td><time>2019-01-10</time></td>
+        <td><a href="using-local-optind-with-bash-getopts">Using Local OPTIND With Bash getopts</a></td>
+    </tr>
+    <tr>
+        <td><time>2018-11-11</time></td>
+        <td><a href="weekend-hack-nossl-io">Weekend Hack: nossl.io</a></td>
+    </tr>
+    <tr>
+        <td><time>2018-10-04</time></td>
+        <td><a href="disabling-ubuntu-motd-spam">Disabling Ubuntu MOTD Spam</a></td>
+    </tr>
+    <tr>
+        <td><time>2018-06-18</time></td>
+        <td><a href="bash-subcommand-aliases">Bash Subcommand Aliases</a></td>
+    </tr>
+    <tr>
+        <td><time>2018-06-06</time></td>
+        <td><a href="beware-of-strncpy-and-strncat">Beware of strncpy() and strncat()</a></td>
+    </tr>
+    <tr>
+        <td><time>2018-05-29</time></td>
+        <td><a href="lobotomizing-gnome">Lobotomizing GNOME</a></td>
+    </tr>
+    <tr>
+        <td><time>2018-03-26</time></td>
+        <td><a href="using-gpg-agent-effectively">Using gpg-agent Effectively</a></td>
+    </tr>
+    <tr>
+        <td><time>2018-03-23</time></td>
+        <td><a href="an-overview-of-bitcoin-utxos">An Overview of Bitcoin UTXOs</a></td>
+    </tr>
+    <tr>
+        <td><time>2018-03-12</time></td>
+        <td><a href="making-bitcoin-fast-introduction">Making Bitcoin Fast: Introduction</a></td>
+    </tr>
+    <tr>
+        <td><time>2018-03-01</time></td>
+        <td><a href="how-sytemtap-userspace-probes-work">How SystemTap Userspace Probes Work</a></td>
+    </tr>
+    <tr>
+        <td><time>2018-02-27</time></td>
+        <td><a href="using-emacs-and-rtags-with-autotools-c++-projects">Using Emacs And RTags With Autools C++ Projects</a></td>
+    </tr>
+    <tr>
+        <td><time>2018-02-05</time></td>
+        <td><a href="indexing-git-repos-with-hound">Indexing Git Repos With Hound</a></td>
+    </tr>
+    <tr>
+        <td><time>2018-01-10</time></td>
+        <td><a href="summing-integer-ranges-with-dc">Summing Integer Ranges With dc</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-12-26</time></td>
+        <td><a href="generating-segwit-change-addresses-in-bitcoin-0">Generating Segwit Change Addresses in Bitcoin 0.15</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-12-22</time></td>
+        <td><a href="an-observation-about-the-bitcoin-block-size-debate">An Observation About The Bitcoin Block Size Debate</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-12-07</time></td>
+        <td><a href="how-many-bitcoins-did-satoshi-nakamoto-mine">How Many Bitcoins Did Satoshi Nakamoto Mine?</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-11-26</time></td>
+        <td><a href="notes-on-std-shared-ptr-and-std-weak-ptr">Notes on std::shared_ptr and std::weak_ptr</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-11-12</time></td>
+        <td><a href="pyflame-packages">Pyflame Packages</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-11-06</time></td>
+        <td><a href="using-google-inbox-with-mailto-links-in-firefox">Using Google Inbox With mailto Links In Firefox</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-11-01</time></td>
+        <td><a href="dumping-multi-threaded-python-stacks">Dumping Multi-Threaded Python Stacks</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-10-24</time></td>
+        <td><a href="ptr-records-are-strange">PTR Records Are Strange</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-09-26</time></td>
+        <td><a href="an-unexpected-python-abi-change">An Unexpected Python ABI Change</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-09-18</time></td>
+        <td><a href="resurrecting-the-sram-automatix">Resurrecting the SRAM Automatix</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-08-17</time></td>
+        <td><a href="production-tornado-deployment-with-systemd">Production Tornado Deployment With Systemd</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-07-31</time></td>
+        <td><a href="demystifying-the-selfish-mining-bet">Demystifying The Selfish Mining Bet</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-07-20</time></td>
+        <td><a href="bitcoin-transaction-malleability">Bitcoin Transaction Malleability</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-07-17</time></td>
+        <td><a href="setting-up-a-headless-raspberry-pi-on-linux">Setting Up A Headless Raspberry Pi On Linux</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-06-24</time></td>
+        <td><a href="smarter-emacs-clang-format">Smarter clang-format In Emacs</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-06-20</time></td>
+        <td><a href="down-the-ssh-auth-sock-rabbit-hole-a-gnome-adventure">Down the SSH_AUTH_SOCK Rabbit Hole: A GNOME Adventure</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-06-09</time></td>
+        <td><a href="the-traveling-salesman-problem-is-not-np-complete">The Traveling Salesman Problem Is Not NP-complete</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-05-17</time></td>
+        <td><a href="declaring-c-string-constants-the-right-way">Declaring C String Constants The Right Way</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-05-04</time></td>
+        <td><a href="c-string-literals-are-lvalues">C String Literals Are Lvalues</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-04-25</time></td>
+        <td><a href="path-max-is-tricky">PATH_MAX Is Tricky</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-04-20</time></td>
+        <td><a href="pinning-gpu-memory-in-tensorflow">Pinning GPU Memory in Tensorflow</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-04-17</time></td>
+        <td><a href="how-to-host-your-own-private-git-repositories">How To Host Your Own Private Git Repositories</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-03-29</time></td>
+        <td><a href="bash-$*-and-$@">Bash $* and $@</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-03-26</time></td>
+        <td><a href="blog-rewrite-in-go">Blog Rewrite In Go</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-03-22</time></td>
+        <td><a href="efficient-file-copying-on-linux">Efficient File Copying On Linux</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-03-17</time></td>
+        <td><a href="the-cult-of-dd">The Cult of DD</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-03-12</time></td>
+        <td><a href="unix-system-call-timeouts">Unix System Call Timeouts</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-03-10</time></td>
+        <td><a href="how-to-play-pool-at-a-bar">How To Play Pool At A Bar</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-03-03</time></td>
+        <td><a href="neoliberalism">Neoliberalism</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-02-21</time></td>
+        <td><a href="an-introduction-to-valgrind-memcheck">An Introduction to Valgrind Memcheck</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-02-15</time></td>
+        <td><a href="all-about-linkers">All About Linkers</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-02-06</time></td>
+        <td><a href="in-defense-of-c++">In Defense of C++</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-02-01</time></td>
+        <td><a href="unexpected-places-you-can-and-cant-use-null-bytes">Unexpected Places You Can And Can't Use Null Bytes</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-01-27</time></td>
+        <td><a href="how-tcp-sockets-work">How TCP Sockets Work</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-01-10</time></td>
+        <td><a href="blocking-io-nonblocking-io-and-epoll">Blocking I/O, Nonblocking I/O, And Epoll</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-01-05</time></td>
+        <td><a href="goroutines-nonblocking-io-and-memory-usage">Goroutines, Nonblocking I/O, And Memory Usage</a></td>
+    </tr>
+    <tr>
+        <td><time>2017-01-03</time></td>
+        <td><a href="hanging-a-process-with-select">Hanging A Process With Select</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-12-29</time></td>
+        <td><a href="stopping-a-process">Stopping A Process</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-12-23</time></td>
+        <td><a href="stdout-buffering">Stdout Buffering</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-12-05</time></td>
+        <td><a href="how-to-nice-a-bash-function">How To Nice A Bash Function</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-11-26</time></td>
+        <td><a href="crosh-ssh-and-chromeos">Crosh/SSH and ChromeOS</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-10-31</time></td>
+        <td><a href="x86-register-encoding">x86 Register Encoding</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-10-30</time></td>
+        <td><a href="pyflame-dual-interpreter-mode">Pyflame Dual Interpreter Mode</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-10-23</time></td>
+        <td><a href="link-registers">Call Stacks and Link Registers</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-10-15</time></td>
+        <td><a href="towers-of-hanoi-in-x86-assembly">Towers of Hanoi in x86 Assembly</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-09-30</time></td>
+        <td><a href="go-compiles-infinite-loops-very-efficiently">Go Compiles Infinite Loops Very Efficiently</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-09-29</time></td>
+        <td><a href="declare-your-bash-variables">Declare Your Bash Variables</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-09-26</time></td>
+        <td><a href="localhost">Localhost</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-09-23</time></td>
+        <td><a href="gocd">Gocd</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-09-02</time></td>
+        <td><a href="using-ssh-agent-and-ed25519-keys-on-gnome">Using ssh-agent and ED25519 Keys on GNOME</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-08-24</time></td>
+        <td><a href="systemd-socket-activation">Systemd Socket Activation</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-08-06</time></td>
+        <td><a href="esc-is-ctrl-[">Esc is Ctrl-[</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-07-17</time></td>
+        <td><a href="f-market-considered-harmful">F-Market Line Considered Harmful</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-07-14</time></td>
+        <td><a href="sponge">Sponge</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-07-12</time></td>
+        <td><a href="5-HTP-contraindications">5-HTP Contraindications</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-07-07</time></td>
+        <td><a href="documenting-code">Documenting Code</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-07-03</time></td>
+        <td><a href="fedora-qemu-and-9p-filesystem-passthrough">Fedora, QEMU, and 9p Filesystem Passthrough</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-06-17</time></td>
+        <td><a href="inline-c-and-asm-in-bash">Inline C/Assembly In Bash</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-06-13</time></td>
+        <td><a href="a-funny-thing-about-c-and-c++">A Funny Thing About C and C++</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-06-12</time></td>
+        <td><a href="crcs-vs-hash-functions">CRCs vs Hash Functions</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-05-31</time></td>
+        <td><a href="github-private-repos">GitHub Private Repos</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-05-23</time></td>
+        <td><a href="memory-protection-and-aslr">Memory Protection and ASLR on Linux</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-05-17</time></td>
+        <td><a href="c++-java-go-and-rust">C++ and Thoughts On Java, Go, and Rust</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-05-10</time></td>
+        <td><a href="position-independent-executables">The Curious Case of Position Independent Executables</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-04-20</time></td>
+        <td><a href="gnome-terminal-server">GNOME Terminal Server</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-03-25</time></td>
+        <td><a href="red-zone">The x86-64 Red Zone</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-03-14</time></td>
+        <td><a href="free-medical-data">Free Medical Data</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-03-10</time></td>
+        <td><a href="ptrace-syscall-python">Ptrace, Syscall, and Python</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-02-29</time></td>
+        <td><a href="how-gcc-lto-works">How GCC LTO Works</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-02-27</time></td>
+        <td><a href="generator-comprehensions-and-using-any-and-all-in-python">Generator Comprehensions / Using any() and all() in Python</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-02-17</time></td>
+        <td><a href="autofs">Autofs</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-02-16</time></td>
+        <td><a href="x86-64-bit-extensions">The 64-bit Extensions to x86 Are a Mess</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-02-14</time></td>
+        <td><a href="configuring-gnome">Configuring GNOME</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-02-12</time></td>
+        <td><a href="gcc-generates-strange-code">GCC Generates Strange Code</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-02-12</time></td>
+        <td><a href="how-to-autotools">How To Use Autotools</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-02-09</time></td>
+        <td><a href="GPL">GPL Licensing</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-02-09</time></td>
+        <td><a href="parse-elf">Parsing ELF symbol tables</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-02-06</time></td>
+        <td><a href="a-ptrace-idiosyncrasy">A Ptrace Idiosyncrasy</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-02-04</time></td>
+        <td><a href="demangle">Demangling C++ Symbols</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-02-02</time></td>
+        <td><a href="c-functions-without-arguments">C Functions Without Arguments</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-02-01</time></td>
+        <td><a href="ptrace-continued">Ptrace (continued)</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-01-30</time></td>
+        <td><a href="ptrace">Using Ptrace For Fun And Profit</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-01-19</time></td>
+        <td><a href="ssh-again">SSH Again</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-01-16</time></td>
+        <td><a href="effectively-using-bash-profile">Effectively Using .bash_profile</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-01-07</time></td>
+        <td><a href="self-balancing-trees">Self-Balancing Trees</a></td>
+    </tr>
+    <tr>
+        <td><time>2016-01-05</time></td>
+        <td><a href="ld-preload-hacks">LD_PRELOAD Hacks</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-12-28</time></td>
+        <td><a href="swappiness">Linux Swappiness</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-12-28</time></td>
+        <td><a href="mlock-and-mlockall">Misunderstanding mlock(2) and mlockall(2)</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-12-27</time></td>
+        <td><a href="bash-if-equals">Bash If/Equals</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-12-18</time></td>
+        <td><a href="site-changes">Some Minor Site Changes</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-12-17</time></td>
+        <td><a href="the-sf-housing-crisis">The SF Housing Crisis</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-12-16</time></td>
+        <td><a href="spacemacs">Spacemacs</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-12-16</time></td>
+        <td><a href="environment-variables">Environment Variables</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-12-12</time></td>
+        <td><a href="the-halting-problem">The Halting Problem</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-12-01</time></td>
+        <td><a href="binding-on-port-zero">Binding On Port 0</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-11-30</time></td>
+        <td><a href="ansi-color-codes">Color and TTYs</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-11-25</time></td>
+        <td><a href="cornering-at-low-speeds">Cornering At Low Speeds</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-11-23</time></td>
+        <td><a href="the-caveats-of-tcp-nodelay">The Caveats of TCP_NODELAY</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-11-22</time></td>
+        <td><a href="the-hate-is-real">The Hate Is Real</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-11-22</time></td>
+        <td><a href="rdio">Rdio</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-11-16</time></td>
+        <td><a href="uninterruptible-sleep">Uninterruptible Sleep</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-11-04</time></td>
+        <td><a href="strace">Strace</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-11-04</time></td>
+        <td><a href="ecryptfs-on-fedora">eCryptfs on Fedora</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-10-31</time></td>
+        <td><a href="shimano-alfine">New Bike Day</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-10-27</time></td>
+        <td><a href="envoy-and-ed25519">Envoy and Ed25519</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-10-17</time></td>
+        <td><a href="adb">Android Developer Options &amp; ADB</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-10-07</time></td>
+        <td><a href="testing-changes">Testing Code</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-10-07</time></td>
+        <td><a href="slack-irc">Slack IRC Gateway</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-10-05</time></td>
+        <td><a href="bitlbee-accounts">BitlBee Accounts</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-10-05</time></td>
+        <td><a href="large-data-files">Large Data Files</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-09-25</time></td>
+        <td><a href="shoes">Shoes</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-09-14</time></td>
+        <td><a href="the-thrill-of-riding">The Thrill Of Riding</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-09-10</time></td>
+        <td><a href="bitlbee-and-hipchat">BitlBee &amp; HipChat</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-09-02</time></td>
+        <td><a href="mission-bicycles-automatix">Mission Bicycle w/ SRAM Automatix Hub</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-08-31</time></td>
+        <td><a href="the-commodification-of-databases">The Commodification of Databases</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-08-25</time></td>
+        <td><a href="rendering-videos-from-opengl">Rendering Videos From OpenGL Is Hard</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-08-17</time></td>
+        <td><a href="linear-algebra">Linear Algebra; or, The Folly of Youth</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-08-12</time></td>
+        <td><a href="surprising-bash">Surprising Things Found While Exploring Bash</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-08-05</time></td>
+        <td><a href="cars-on-market-st">Cars And Turn Restrictions On Market St In San Francisco</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-07-30</time></td>
+        <td><a href="being-self-taught">Being Self-Taught</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-07-28</time></td>
+        <td><a href="resource-management-in-gc-languages">Resource Management in Garbage Collected Languages</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-07-07</time></td>
+        <td><a href="dotfiles">My Philosophy on &quot;Dot Files&quot;</a></td>
+    </tr>
+    <tr>
+        <td><time>2015-05-27</time></td>
+        <td><a href="mysql-read-defaults">An Important Difference Between mysql(1) and MySQLdb</a></td>
+    </tr>
+</table>
+<hr>
+<div class="nav-bottom">
+    <ul class="nav-list">
+        <li class="nav-item"><a href="/">Home</a></li>
+        <li class="nav-item"><a href="m&#97;ilto&#58;%&#54;5va&#110;&#64;%65kli%7&#52;&#122;k&#101;&#46;&#111;%72g">Email</a></li>
+        <li class="nav-item"><a href="/static/0x157EFCACBC648422.asc">PGP</a></li>
+        <li class="nav-item"><a href="https://github.com/eklitzke">GitHub</a></li>
+    </ul>
+</div>
+</body>
+</html>
