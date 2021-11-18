@@ -11,7 +11,7 @@
 <div class="leftCorner">
     <a href="home.html">Home</a>
 </div>
-<iframe id="main" name="main" width="100%" height="100%" src="404.html" onload="iFrameHeight()" frameborder="0"
+<iframe id="main" name="main" width="100%" height="100%" src="pages/404.html" onload="iFrameHeight()" frameborder="0"
         scrolling="no"></iframe></body>
 <div class="navToTop">
     <a href="#top"><img style="transform: rotate(270deg); height: 50px; width: 50px"  src="assets/arrow.jpg"></a>
@@ -19,6 +19,11 @@
 
 <script>
     $(function(){
+        //https://stackoverflow.com/questions/371875/local-file-access-with-javascript
+        $.get('/LMS/blog-h5/src/', function(data) {
+            debugger
+            alert(data);
+        });
         let page = $.query.get("page");
         console.log(fileExistCheck(page));
         if(!fileExistCheck(page)) {
