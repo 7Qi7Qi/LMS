@@ -1,99 +1,32 @@
-<!--StartFragment--><b class="fwa0 fwaN0">Vell, I'm just zis guy, you know?</b><span class="fwa1 fwaN0"></span>
-<hr align="CENTER" noshade="noshade" size="2" width="100%" class="fwa36 fwaN0"><span class="fwa1 fwaN0">This is just another boring personal website. I don't have a Facebook, sorry. Sounds to me like that would hurt. I do, however, have a<span>&nbsp;</span></span>
-<a href="#" class="fwa12">Twitter account</a><span class="fwa1 fwaN0">, a<span>&nbsp;</span></span><a href="#"
-                                                                                                      class="fwa12">LinkedIn
-    profile</a><span class="fwa1 fwaN0"><span>&nbsp;</span>and<span>&nbsp;</span></span><a href="#"
-                                                                                           class="fwa12">résumé</a><span
-        class="fwa1 fwaN0">, a<span>&nbsp;</span></span><a href="#" class="fwa12">blog</a><span class="fwa1 fwaN0">, and, to the great amusement of my children, a distinct German accent.</span>
-<p class="fwa36 fwaN0"></p><p class="fwa36 fwaN0">Professionally, I'm an accidental Infrastructure
-    Security<span>&nbsp;</span><a href="#" class="fwa25">Architect</a>. I also teach graduate classes
-    in<span>&nbsp;</span><a href="#" class="fwa25">System Administration</a><span>&nbsp;</span>and<span>&nbsp;</span><a
-            href="#" class="fwa25">Advanced Programming in the UNIX
-        Environment</a><span>&nbsp;</span>at<span>&nbsp;</span><a href="#" class="fwa25">Stevens Institute of
-        Technology</a>, both of which now offer online video lectures free to anybody:</p><p class="fwa36 fwaN0"></p>
-<ul class="fwa36 fwaN0">
-    <li><a href="#" class="fwa25">CS615 System Administration</a></li>
-    <li><a href="#" class="fwa25">CS631 Advanced Programming in the UNIX Environment</a></li>
-</ul><p class="fwa36 fwaN0"></p><p class="fwa36 fwaN0">I still don't obfuscate my<span>&nbsp;</span><a href="#"
-                                                                                                       class="fwa25">email
-    address</a>, have a<span>&nbsp;</span><a href="#" class="fwa25">PGP key</a>, and ride a very long skateboard through
-    New York City, frequently wondering what things will be like when I grow up.</p>
-<hr align="CENTER" noshade="noshade" size="2" width="100%" class="fwa36 fwaN0"><p class="fwa36 fwaN0">
-    Latest<span>&nbsp;</span><a href="#" class="fwa25">blog</a><span>&nbsp;</span>entry:</p>
-<ul class="fwa36 fwaN0">
-    <li><a href="#" class="fwa25">IPC Buffer Sizes</a><span>&nbsp;</span>(2021-11-15)</li>
-</ul><p class="fwa36 fwaN0">Ongoing projects:</p>
-<ul class="fwa51 fwaN0">
-    <li><a href="#" class="fwa25">xpipe(1)</a></li>
-    <li><a href="#" class="fwa25">What's that cert?</a></li>
-    <li><a href="#" class="fwa25">Compare public DNS resolver results</a></li>
-    <li><a href="#" class="fwa59">gip -- a tool to get an IP address or CIDR in a given location</a></li>
-    <li><a href="#" class="fwa25">UTC or GTFO</a><span>&nbsp;</span>- stickers, etc.; profits go to
-        the<span>&nbsp;</span><a href="#" class="fwa25">Network Time Foundation</a></li>
-    <li><a href="#" class="fwa25">@10mtweet</a></li>
-    <li><a href="#" class="fwa68">@isthenetonfire</a></li>
-    <li><a href="#" class="fwa25">My book on System Administration</a></li>
-</ul>
-<hr align="CENTER" noshade="noshade" size="2" width="100%" class="fwa36 fwaN0"><small class="fwa72 fwaN0">[<a href="#"
-                                                                                                              class="fwa25">jschauma@netmeister.org</a>]
-    &nbsp;[<a href="#" class="fwa25">@jschauma</a>]</small><!--EndFragment-->
+---
+　　layout: default
+　　title: 我的Blog
+---
+
+　　<h2>{{ page.title }}</h2>
+
+　　<p>最新文章</p>
+
+　　<ul class="article">
+
+    　　　　{% for post in site.posts %}
+
+    　　　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+
+    　　　　{% endfor %}
+
+    </ul>
 
 <style>
-  .fwa1 {
-    background-color: rgb(255, 255, 255);
-    display: inline !important;
-    float: none;
+  .article {
+    position: absolute; /*绝对定位*/
+    top: 22%;
+    left: 35%; /*右侧*/
+    width: 30%;
+    white-space: nowrap; /*不换行*/
+    font-size: 24px;
   }
-
-  .fwa36 {
-    text-decoration-color: initial;
-  }
-
-  .fwa51 {
-    text-decoration-color: initial;
-  }
-
-  .fwa0 {
-    text-decoration-color: initial;;
-    font-weight: 400
-  }
-
-  .fwa12 {
+  .a {
     color: rgb(170, 0, 0);
-    font-family: "Myriad Pro", "Trebuchet MS", Helvetica, sans-serif;
-    font-size: 18.6667px;
-    font-style: normal;
-    font-weight: 400;
-    white-space: normal;
-    word-spacing: 0px;
-    -webkit-text-stroke-width: 0px;
-  }
-
-  .fwa72 {
-    text-decoration-color: initial;;
-    font-size: 18.6667px
-  }
-
-  .fwa25 {
-    color: rgb(170, 0, 0);
-  }
-
-  .fwa59 {
-    color: rgb(170, 0, 0);
-  }
-
-  .fwa68 {
-    color: rgb(170, 0, 0);
-  }
-
-  .fwaN0 {
-    color: rgb(0, 0, 0);
-    font-family: "Myriad Pro", "Trebuchet MS", Helvetica, sans-serif;
-    font-size: 18.6667px;
-    font-style: normal;
-    font-weight: 400;
-    white-space: normal;
-    word-spacing: 0px;
-    text-decoration-thickness: initial
   }
 </style>
