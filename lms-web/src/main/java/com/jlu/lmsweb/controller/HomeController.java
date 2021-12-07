@@ -11,12 +11,12 @@ public class HomeController {
     public static Integer count = 1;
 
 
-    @RequestMapping("")
+    @RequestMapping("first")
     public ModelAndView home() {
         return new ModelAndView("home.html");
     }
 
-    @RequestMapping("first")
+    @RequestMapping("")
     public String firstTest() {
         System.out.println("count++ = " + count++);
         return count.toString();
