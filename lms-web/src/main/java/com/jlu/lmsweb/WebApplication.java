@@ -1,6 +1,7 @@
 package com.jlu.lmsweb;
 
 import com.jlu.lmsweb.utils.ProgressBarUtil;
+import com.jlu.lmsweb.utils.ThreadPool;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -15,6 +16,9 @@ public class WebApplication {
             barUtil.printProgress(i);
         }
         System.out.println("\n*****************************************LMS Started*****************************************");
+
+        ThreadPool threadPool = new ThreadPool();
+        threadPool.start();
     }
 
 }
