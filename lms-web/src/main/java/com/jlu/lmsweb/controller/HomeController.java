@@ -1,9 +1,11 @@
 package com.jlu.lmsweb.controller;
 
-import org.springframework.stereotype.Controller;
+import com.jlu.lmsweb.utils.FileUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.io.IOException;
 
 @RestController
 public class HomeController {
@@ -16,7 +18,7 @@ public class HomeController {
         return new ModelAndView("home.html");
     }
 
-    @RequestMapping("")
+    @RequestMapping("count")
     public String firstTest() {
         System.out.println("count++ = " + count++);
         return count.toString();
@@ -47,5 +49,10 @@ public class HomeController {
                 + "</style>\n"
                 + "</html>";
         return s;
+    }
+
+    @RequestMapping("")
+    public String sql() throws IOException {
+        return FileUtils.findAndToString("sql.html");
     }
 }
