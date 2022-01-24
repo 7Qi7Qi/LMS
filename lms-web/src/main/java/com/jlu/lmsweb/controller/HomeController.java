@@ -53,6 +53,6 @@ public class HomeController {
 
     @RequestMapping("")
     public String sql() throws IOException {
-        return FileUtils.findAndToString("sql.html");
+        return FileUtils.findAndToString("classpath*:sql.html");
     }
 }

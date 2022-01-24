@@ -17,8 +17,8 @@ public class WebApplication {
         }
         System.out.println("\n*****************************************LMS Started*****************************************");
 
-        ThreadPool threadPool = new ThreadPool();
-        threadPool.start();
+//        ThreadPool threadPool = new ThreadPool();
+//        threadPool.start();
     }
 
 }
