@@ -1,19 +1,12 @@
 <template>
   <p>404</p>
-<!--  <hello-world>111111111112</hello-world>-->
+  <el-button size="big">404</el-button>
 </template>
 
 <script>
-// import HelloWorld from "../components/HelloWorld";
 export default {
-  // components: {HelloWorld},
   name: "404",
-  mounted() {
-    debugger;
-    console.log(40411)
-  },
   created() {
-    debugger
   }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>this is a home page</p>
+    <el-button size="big">Home</el-button>
   </div>
 </template>
 
@@ -8,8 +8,6 @@
 export default {
   name: "Home",
   mounted() {
-    debugger;
-    console.log('Home')
   }
 }
 </script>
