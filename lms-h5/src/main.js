@@ -1,6 +1,6 @@
 // import ElementUI from 'element-ui'
 // import 'element-ui/lib/theme-chalk/index.css'
-import routes from './router/routes'
+import routes from './routes'
 import { createApp, h} from 'vue'
 
 
