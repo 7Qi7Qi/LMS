@@ -1,32 +1,43 @@
-import {Router, createRouter, createWebHistory, RouteRecordRaw} from 'vue-router';
+import {createRouter, createWebHistory, Router} from "vue-router";
 
+// @ts-ignore
+const modules = import.meta.glob('../pages/*.vue');
+const routes = [];
 
-import home from '../pages/Home.vue'
-import about from '../pages/About.vue'
-import notFound from '../pages/404.vue'
+for (let i in modules) {
+  let item = modules[i];
+  const routePath = item.name.replace(/(.*\/)*([^.]+).*/ig, '$2');
+  routes.push({
+    path: '/' + routePath,
+    name: routePath,
+    title: routePath,
+    // @ts-ignore
+    component: () => import(item.name),
+  })
+}
 
-const routes: RouteRecordRaw[] = [
-  {
-    path: "/",
-    component: home,
-  },
-  {
-    path: "/about",
-    component: about,
-    redirect: '',
-    children: [
-
-    ]
-  },
-  {
-    path: "/notFound",
-    component: notFound,
-  }
-
-]
-
-
-export const router: Router = createRouter({
+export const router = createRouter({
   history: createWebHistory(),
   routes
 })
+
+
+
+// router.beforeEach((form, to, next) => {
+//   const store = useStore()
+//   const noAuths = ['/login', '/login/gitee', '/home.html']
+//   if (store.isLogin) {
+//     if (noAuths.includes(form.path)) {
+//       next('/new')
+//       return
+//     }
+//     next()
+//   } else {
+//     if (noAuths.includes(form.path)) {
+//       next()
+//     } else {
+//       window.location.href = '/home.html'
+//     }
+//   }
+// })
+
