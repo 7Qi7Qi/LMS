@@ -23,7 +23,8 @@ export const router = createRouter({
 
 
 
-// router.beforeEach((form, to, next) => {
+router.beforeEach((form, to, next) => {
+  debugger
 //   const store = useStore()
 //   const noAuths = ['/login', '/login/gitee', '/home.html']
 //   if (store.isLogin) {
@@ -39,5 +40,5 @@ export const router = createRouter({
 //       window.location.href = '/home.html'
 //     }
 //   }
-// })
+})
 

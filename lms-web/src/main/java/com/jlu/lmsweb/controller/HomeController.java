@@ -1,6 +1,8 @@
 package com.jlu.lmsweb.controller;
 
 import com.jlu.lmsweb.utils.FileUtils;
+import org.springframework.aop.framework.AopContext;
+import org.springframework.aop.support.AopUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
@@ -21,6 +23,14 @@ public class HomeController {
     @RequestMapping("count")
     public String firstTest() {
         System.out.println("count++ = " + count++);
+        //AopContext.currentProxy()
+        //是否是代理对象
+        AopUtils.isAopProxy(AopContext.currentProxy());
+        //是否是cglib代理对象
+        AopUtils.isCglibProxy(AopContext.currentProxy());
+        //是否是jdk代理对象
+        AopUtils.isJdkDynamicProxy(AopContext.currentProxy());
+
         return count.toString();
     }
 
